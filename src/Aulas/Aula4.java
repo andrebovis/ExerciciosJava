@@ -20,7 +20,7 @@ public class Aula4 {
     }
 
     public static void realizarAnalisesDaLista(List<Integer> numeros) {
-        System.out.println("--- Resultados da Análise da Lista ---");
+        System.out.println(" Resultados da Análise da Lista ");
 
         double mediaCalculada = calcularMedia(numeros);
         System.out.println("Média da lista: " + mediaCalculada);
@@ -38,12 +38,10 @@ public class Aula4 {
         System.out.println("Total Impares : " + totalImpares);
 
         List<Integer> primosEncontrados = encontrarPrimosNaLista(numeros);
-        if (primosEncontrados.isEmpty()) {
-            System.out.println("Nenhum número primo encontrado na lista.");
-        } else {
+        
             System.out.println("Números primos na lista: " + primosEncontrados);
         }
-    }
+    
 
     private static boolean isPrimo(int numero) {
         if (numero <= 1) {
@@ -62,16 +60,12 @@ public class Aula4 {
         for (Integer num : numeros) {
             soma += num;
         }
-        if (numeros.isEmpty()) {
-            return 0.0;
-        }
+        
         return soma / numeros.size();
     }
 
     private static int calcularMenorNum(List<Integer> numeros) {
-        if (numeros.isEmpty()) {
-            throw new IllegalArgumentException("A lista está vazia. Não é possível encontrar o menor número.");
-        }
+      
         int menorNum = numeros.get(0);
         for (Integer num : numeros) {
             if (num < menorNum) {
@@ -82,9 +76,7 @@ public class Aula4 {
     }
 
     private static int calcularMaiorNum(List<Integer> numeros) {
-        if(numeros.isEmpty()) {
-            throw new IllegalArgumentException("A lista está vazia. Não é possível encontrar o maior número.");
-        }
+       
         int maiorNum = numeros.get(0);
         for ( Integer num : numeros) {
             if (num > maiorNum) {
